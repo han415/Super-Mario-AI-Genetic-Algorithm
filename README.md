@@ -1,6 +1,7 @@
-# Super-Mario-AI-Genetic-Algorithm
-Automated Super Mario Agent using Genetic Algorithm and Neural Networks
+# Super Mario AI: Genetic Algorithm
+
 基於遺傳演算法與神經網路的超級瑪利歐自動遊玩代理人
+**Automated Super Mario Agent using Genetic Algorithm and Neural Networks**
 
 本專案從零開始 (From Scratch) 建構神經網路與遺傳演算法 (Genetic Algorithm, GA)，讓 AI 在 `gym-super-mario-bros` 環境中透過不斷的世代交替、基因突變與物競天擇，自我學習並找出能讓瑪利歐跑得最遠的最佳操作權重。
 
@@ -12,11 +13,11 @@ Automated Super Mario Agent using Genetic Algorithm and Neural Networks
 
 `Environment Setup` ➔ `Neural Network Initialization` ➔ `Genetic Algorithm (Selection, Crossover, Mutation)` ➔ `Fitness Evaluation` ➔ `Model Export`
 
-| 開發階段                | 核心技術                               | 對應程式碼                                               |
-| :----------------- | :------------------------------- | :------------------------------------------------------- |
-| **1. 演算法訓練**        | 結合神經網路前向傳播與 GA 演化迭代邏輯                 | [`train.py`](./train.py)                                 |
-| **2. 模型展示**        | 讀取最佳基因權重，並實際渲染遊戲畫面                | [`play.py`](./play.py)                                   |
-| **3. 權重儲存**        | 儲存訓練 5000 代後表現最佳的神經網路權重                     | [`best_genome.npy`](./best_genome.npy)                   |
+| 開發階段 | 核心技術 | 對應程式碼 |
+| :--- | :--- | :--- |
+| **1. 演算法訓練** | 結合神經網路前向傳播與 GA 演化迭代邏輯 | [`train.py`](./train.py) |
+| **2. 模型展示** | 讀取最佳基因權重，並實際渲染遊戲畫面 | [`play.py`](./play.py) |
+| **3. 權重儲存** | 儲存訓練 5000 代後表現最佳的神經網路權重 | [`best_genome.npy`](./best_genome.npy) |
 
 ---
 
@@ -51,7 +52,7 @@ Automated Super Mario Agent using Genetic Algorithm and Neural Networks
 
 本專案的演算法架構與資料流傳遞過程如下圖所示：
 
-```text
+<pre>
        Game Observation (15x16x3 RGB)
                   │
                   ▼
@@ -69,6 +70,7 @@ Automated Super Mario Agent using Genetic Algorithm and Neural Networks
                   │
                   ▼
        Execute in Super Mario
+</pre>
 
 ---
 
